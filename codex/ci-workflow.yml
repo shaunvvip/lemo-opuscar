@@ -1,0 +1,28 @@
+name: Codex compatibility
+on:
+  push:
+    paths: ['.agents/**', 'codex/**', '.github/workflows/codex.yml', 'core/render/**', 'package*.json']
+  pull_request:
+    paths: ['.agents/**', 'codex/**', '.github/workflows/codex.yml', 'core/render/**', 'package*.json']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: sh -n codex/install-skill.sh && sh -n .agents/skills/lemo-opuscar/scripts/setup.sh
+      - run: python3 codex/test-install.py
+      - run: npm ci --no-audit --no-fund
+      - run: node node_modules/playwright-core/cli.js install --with-deps chromium-headless-shell
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: python3 codex/smoke-test.py

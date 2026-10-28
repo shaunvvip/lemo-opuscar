@@ -1,5 +1,7 @@
 <div align="center">
 
+> Codex: [setup, usage and upstream sync / 安装、使用与上游同步](codex/README.md).
+
 # Lemo-Opuscar
 
 **一套用代码做片的风格工具箱：<!--n-->59<!--/n--> 种现成风格，也能做出你自己的。**<br>

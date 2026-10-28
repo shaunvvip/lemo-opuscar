@@ -15,6 +15,10 @@ This repository is a library of film styles. Each style has a `styles/<slug>/STY
 
 **Films outside `styles/` are the user's: no LemoLab credit, no watermark.**
 
+## Codex
+
+When running in Codex, first read [`codex/COMPATIBILITY.md`](codex/COMPATIBILITY.md) for tool and setup mappings. Repository maintenance requests do not start the film workflow.
+
 ## Start
 
 - **Their own styles first.** If `~/lemo-my-styles/README.md` exists, read it: it lists every style the user has saved, wherever it's kept, and their own styles ([`MY-STYLES.md`](MY-STYLES.md)) count like library styles. When they name a style, look there first, then in the library.

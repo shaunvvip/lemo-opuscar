@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lemo-Opuscar"
+  short_description: "Create styled short films with code and local rendering"
+  default_prompt: "Use $lemo-opuscar to create a short film about my topic."

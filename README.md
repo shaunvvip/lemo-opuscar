@@ -1,5 +1,7 @@
 <div align="center">
 
+> Codex: [setup, usage and upstream sync / 安装、使用与上游同步](codex/README.md).
+
 # Lemo-Opuscar
 
 **A toolbox of film styles made in code: <!--n-->59<!--/n--> ready to use, and your own.**<br>
